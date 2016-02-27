@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -18,6 +19,7 @@ public class Configuracion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_configuracion);
         day = (Spinner)findViewById(R.id.spinne1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asig, android.R.layout.simple_spinner_item);
@@ -40,12 +42,19 @@ public class Configuracion extends AppCompatActivity {
             public void onClick(View v)
             {
                 CheckBox che=(CheckBox)findViewById(R.id.check1);
-                Spinner spi=(Spinner)findViewById(R.id.spinne1);
+                Boolean valor=che.isChecked();
+
+
+
+                Spinner mySpinner=(Spinner) findViewById(R.id.spinne1);
+                String valor_spinner = mySpinner.getSelectedItem().toString();
+                Toast.makeText(getApplicationContext(),"Datos"+valor_spinner+valor,Toast.LENGTH_LONG).show();
 
                 String filename="user.txt";
                 File file = new File(getFilesDir(), filename);
-                String string = che.getText().toString()+",#"+spi.toString();
+                String string = che.getText().toString()+",#"+valor_spinner;
                 FileOutputStream outputStream;
+
                 try {
                     outputStream = openFileOutput(filename,MODE_PRIVATE);
                     outputStream.write(string.getBytes());
@@ -57,8 +66,10 @@ public class Configuracion extends AppCompatActivity {
                 {
                     e.printStackTrace();
                 }
+
                 Intent o = new Intent(getApplicationContext(),Estadistica.class);
                 startActivity(o);
+
             }
         });
 
