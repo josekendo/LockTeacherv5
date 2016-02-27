@@ -49,5 +49,9 @@ public class Pin extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 
 }

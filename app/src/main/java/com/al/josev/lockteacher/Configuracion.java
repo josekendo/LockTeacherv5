@@ -17,5 +17,7 @@ public class Configuracion extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         day.setAdapter(adapter);
         setContentView(R.layout.activity_configuracion);
+
+
     }
 }
