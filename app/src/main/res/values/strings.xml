@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LockTeacher</string>
+
+    <!-- Strings related to login -->
+    <string name="bienvenida">Bienvenido a LockTeacher</string>
+    <string name="descripcion">Introduzca su nombre y un pin de 4 numeros, para acceder a la configuracion.</string>
+    <string name="nombre">Nombre</string>
+    <string name="password">Contraseña</string>
 </resources>
