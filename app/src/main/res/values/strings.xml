@@ -6,4 +6,5 @@
     <string name="descripcion">Introduzca su nombre y un pin de 4 numeros, para acceder a la configuracion.</string>
     <string name="nombre">Nombre</string>
     <string name="password">Contraseña</string>
+    <string name="descrip">Introduzca su verificacion</string>
 </resources>
