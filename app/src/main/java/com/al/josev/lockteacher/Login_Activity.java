@@ -22,8 +22,7 @@ public class Login_Activity extends AppCompatActivity {
         File file = new File(getFilesDir(), "user.txt");
         if(file.exists())
         {
-            Pin p = new Pin();
-            Intent i = p.getIntent();
+            Intent i = new Intent(this,Pin.class);
             startActivity(i);
         }
         //se declara las variables del reegistro
