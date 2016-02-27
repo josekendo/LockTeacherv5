@@ -1,5 +1,6 @@
 package com.al.josev.lockteacher.Clases;
 
+import java.io.File;
 import java.util.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -76,8 +77,8 @@ public class Lector {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public String[] leerLogin() throws FileNotFoundException, IOException {
-        read = new FileReader("ruta de android");
+    public String[] leerLogin(File a) throws FileNotFoundException, IOException {
+        read = new FileReader("user.txt");
         lec = new BufferedReader(read);
         String[] login = null;
         String splitter = ",#";
