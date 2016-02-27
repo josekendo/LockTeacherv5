@@ -19,7 +19,7 @@ public class Configuracion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion);
-        day = (Spinner)findViewById(R.id.spinne);
+        day = (Spinner)findViewById(R.id.spinne1);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asig, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         day.setAdapter(adapter);

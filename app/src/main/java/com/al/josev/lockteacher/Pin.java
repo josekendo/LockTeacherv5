@@ -44,6 +44,9 @@ public class Pin extends AppCompatActivity {
                 {
                     Intent t = new Intent(getApplicationContext(),Configuracion.class);
                     startActivity(t);
+                } else {
+                    Intent t = new Intent(getApplicationContext(),Preguntas.class);
+                    startActivity(t);
                 }
 
             }
