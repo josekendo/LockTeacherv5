@@ -17,5 +17,9 @@
     <string name="castellano">Castellano</string>
     <string name="aciertos">Aciertos:</string>
     <string name="fallos">Fallos:</string>
-    
+    <string-array name="asig">
+        <item>Castellano</item>
+        <item>Ingles</item>
+        <item>Matematicas</item>
+    </string-array>
 </resources>
