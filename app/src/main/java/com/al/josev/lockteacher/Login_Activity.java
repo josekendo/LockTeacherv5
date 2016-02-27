@@ -18,8 +18,11 @@ public class Login_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_);
-
-
+        File file = new File(getFilesDir(), "user.txt");
+        if(file.exists())
+        {
+            //pasamos a un nuevo activity
+        }
         //se declara las variables del reegistro
         nombre=(EditText)findViewById(R.id.input_nom);
         pin1=(EditText)findViewById(R.id.input_pass);
