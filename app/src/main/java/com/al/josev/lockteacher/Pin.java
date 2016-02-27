@@ -40,7 +40,7 @@ public class Pin extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                if(info[0].compareToIgnoreCase(nombre.getText().toString()) == 0 && info[1].compareToIgnoreCase(pin1.getText().toString()) == 0)
+                if(info[0].compareToIgnoreCase(nombre.getText().toString()) != 0 && info[1].compareToIgnoreCase(pin1.getText().toString()) != 0)
                 {
                     Intent t = new Intent(getApplicationContext(),Configuracion.class);
                     startActivity(t);

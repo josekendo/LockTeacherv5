@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -45,17 +46,17 @@ public class Login_Activity extends AppCompatActivity {
                     error=true;
                 }
 
-                if(pin1.getText().toString().length() == 0 || pin2.getText().toString().length() == 0 || pin1.getText().toString().compareToIgnoreCase(pin2.getText().toString()) == 0)
+                if(pin1.getText().toString().length() == 0 || pin2.getText().toString().length() == 0 || pin1.getText().toString().compareToIgnoreCase(pin2.getText().toString()) != 0)
                 {
                     error=true;
                 }
 
-                if(pin1.getText().toString().length() <= 4)
+                if(pin1.getText().toString().length() < 4)
                 {
                     error=true;
                 }
 
-                if(pin2.getText().toString().length() <= 4)
+                if(pin2.getText().toString().length() < 4)
                 {
                     error=true;
                 }
@@ -70,7 +71,7 @@ public class Login_Activity extends AppCompatActivity {
                         outputStream = openFileOutput(filename,MODE_PRIVATE);
                         outputStream.write(string.getBytes());
                         outputStream.close();
-                        Intent t = new Intent(getApplicationContext(),Configuration.class);
+                        Intent t = new Intent(getApplicationContext(),Configuracion.class);
                         startActivity(t);
                     }
                     catch (Exception e)
@@ -78,6 +79,8 @@ public class Login_Activity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
+                } else {
+                    Toast.makeText(getApplicationContext(),"Has introducido algun dato incorrecto",Toast.LENGTH_LONG).show();
                 }
             }
         });
