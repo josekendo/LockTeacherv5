@@ -1,6 +1,7 @@
 package com.al.josev.lockteacher;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -69,8 +70,7 @@ public class Login_Activity extends AppCompatActivity {
                         outputStream = openFileOutput(filename,MODE_PRIVATE);
                         outputStream.write(string.getBytes());
                         outputStream.close();
-                        Configuracion c = new Configuracion();
-                        Intent t = c.getIntent();
+                        Intent t = new Intent(getApplicationContext(),Configuration.class);
                         startActivity(t);
                     }
                     catch (Exception e)
