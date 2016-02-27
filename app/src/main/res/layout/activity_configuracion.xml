@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New CheckBox"
-            android:id="@+id/checkBox"
+            android:id="@+id/check1"
             android:layout_gravity="right"
             android:layout_weight="0.15"
             android:checked="false" />
@@ -49,7 +49,7 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/spinne"
+            android:id="@+id/spinne1"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.03"
             android:spinnerMode="dialog" />
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/edad1"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.03"
             android:textColor="#ffffff" />
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
-            android:id="@+id/button"
+            android:id="@+id/button4"
             android:layout_gravity="right"
             android:layout_weight="0.03" />
 
