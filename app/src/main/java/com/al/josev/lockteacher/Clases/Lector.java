@@ -11,9 +11,9 @@ public class Lector {
 
     FileReader read;
     BufferedReader lec;
-    Nivel nTres;
-    Nivel nCinco;
-    Nivel nSiete;
+    Nivel nTres = new Nivel();
+    Nivel nCinco = new Nivel();
+    Nivel nSiete = new Nivel();
 
     public Lector() {
 
