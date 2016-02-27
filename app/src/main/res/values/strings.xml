@@ -9,7 +9,7 @@
     <string name="descrip">Introduzca su verificacion</string>
     <string name="next">Siguiente</string>
     <string name="asignatura">Seleccione las asignaturas a mostrar</string>
-    <string name="edad">Introduzca la edad del niño</string>
+    <string name="edad">Introduzca la edad del niño:</string>
     <string name="edad2">(la edad debe estar comprendida entre 3 y 10)</string>
     <string name="estadisticas">Estadisticas</string>
     <string name="matematicas">Matematicas</string>
