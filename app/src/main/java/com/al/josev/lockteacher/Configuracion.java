@@ -20,21 +20,15 @@ public class Configuracion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_configuracion);
-        day = (Spinner)findViewById(R.id.spinne1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.asig, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        day.setAdapter(adapter);
-        setContentView(R.layout.activity_configuracion);
-
-
-        File file = new File(getFilesDir(), "configuracion.txt");
-        if(file.exists())
+        Bundle extras = getIntent().getExtras();
+        if(extras.getBoolean("confi"))
         {
-            Intent k = new Intent(this,Estadistica.class);
-            startActivity(k);
+            File file = new File(getFilesDir(), "configuracion.txt");
+            if (file.exists()) {
+                Intent k = new Intent(this, Estadistica.class);
+                startActivity(k);
+            }
         }
-
         Button boton3=(Button)findViewById(R.id.button4);
         boton3.setOnClickListener(new View.OnClickListener()
         {
@@ -44,22 +38,18 @@ public class Configuracion extends AppCompatActivity {
                 CheckBox che=(CheckBox)findViewById(R.id.check1);
                 Boolean valor=che.isChecked();
 
-
-
-                Spinner mySpinner=(Spinner) findViewById(R.id.spinne1);
-                String valor_spinner = mySpinner.getSelectedItem().toString();
-                Toast.makeText(getApplicationContext(),"Datos"+valor_spinner+valor,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Datos"+valor,Toast.LENGTH_LONG).show();
 
                 String filename="user.txt";
                 File file = new File(getFilesDir(), filename);
-                String string = che.getText().toString()+",#"+valor_spinner;
+                String string = valor+",#";//codigo
                 FileOutputStream outputStream;
 
                 try {
                     outputStream = openFileOutput(filename,MODE_PRIVATE);
                     outputStream.write(string.getBytes());
                     outputStream.close();
-                    Intent t = new Intent(getApplicationContext(),Configuracion.class);
+                    Intent t = new Intent(getApplicationContext(),Estadistica.class);
                     startActivity(t);
                 }
                 catch (Exception e)

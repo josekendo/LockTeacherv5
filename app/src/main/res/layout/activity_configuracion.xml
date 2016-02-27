@@ -45,15 +45,37 @@
             android:id="@+id/bie"
             android:layout_weight="0.03"
             android:textColor="#ffffff" />
-
-        <Spinner
-            android:layout_width="match_parent"
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+        <RadioButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinne1"
+            android:text="Matematicas"
+            android:id="@+id/radioButton1"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.03"
-            android:spinnerMode="dialog" />
+            android:layout_weight="0.15"
+            android:checked="false" />
 
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Castellano"
+            android:id="@+id/radioButton2"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.15"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingles"
+            android:id="@+id/radioButton3"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.15"
+            android:checked="false" />
+</RadioGroup>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

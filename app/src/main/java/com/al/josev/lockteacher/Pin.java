@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.al.josev.lockteacher.Clases.Lector;
 
@@ -42,6 +43,7 @@ public class Pin extends AppCompatActivity {
 
                 if(info[0].compareToIgnoreCase(nombre.getText().toString()) != 0 && info[1].compareToIgnoreCase(pin1.getText().toString()) != 0)
                 {
+                    Toast.makeText(getApplicationContext(),"datos"+nombre.getText().toString()+"-"+info[0]+"---"+pin1.getText().toString()+"-"+info[1],Toast.LENGTH_LONG).show();
                     Intent t = new Intent(getApplicationContext(),Configuracion.class);
                     startActivity(t);
                 } else {
