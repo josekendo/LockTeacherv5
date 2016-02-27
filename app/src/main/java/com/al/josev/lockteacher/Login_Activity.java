@@ -1,5 +1,6 @@
 package com.al.josev.lockteacher;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,9 @@ public class Login_Activity extends AppCompatActivity {
         File file = new File(getFilesDir(), "user.txt");
         if(file.exists())
         {
-            //pasamos a un nuevo activity
+            Pin p = new Pin();
+            Intent i = p.getIntent();
+            startActivity(i);
         }
         //se declara las variables del reegistro
         nombre=(EditText)findViewById(R.id.input_nom);
@@ -61,12 +64,15 @@ public class Login_Activity extends AppCompatActivity {
                 {
                     String filename="user.txt";
                     File file = new File(getFilesDir(), filename);
-                    String string = nombre.getText().toString()+",[@]"+pin1.getText().toString();
+                    String string = nombre.getText().toString()+",#"+pin1.getText().toString();
                     FileOutputStream outputStream;
                     try {
                         outputStream = openFileOutput(filename,MODE_PRIVATE);
                         outputStream.write(string.getBytes());
                         outputStream.close();
+                        Configuracion c = new Configuracion();
+                        Intent t = c.getIntent();
+                        startActivity(t);
                     }
                     catch (Exception e)
                     {
